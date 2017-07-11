@@ -10,7 +10,7 @@ export default class TodolistComponent extends React.Component{
 						
 						this.props.todolist.map(function(object){
 							return (
-								<li key={object.id}>
+								<li key={object.id} onClick={function(){ this.props.selectTodo(object) }.bind(this)}>
 									{object.description}
 								</li>
 								);

@@ -1,4 +1,4 @@
-export const selectToDo = (todo) => {
+export const selectTodo = (todo) => {
 	console.log("You clicked on todo: " + todo.id);
 
 	return {

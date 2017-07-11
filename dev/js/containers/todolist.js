@@ -2,6 +2,9 @@ import React from 'react';
 
 import TodolistComponent from '../components/todolist-component';
 import { connect } from 'react-redux';
+import { selectTodo } from '../actions';
+import { bindActionCreators } from 'redux';
+
 
 class Todolist extends React.Component{
 
@@ -19,5 +22,8 @@ function mapStateToProps(state){
 	}
 }
 
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({selectTodo: selectTodo}, dispatch);
+}
 
-export default connect(mapStateToProps)(TodolistComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(TodolistComponent);
