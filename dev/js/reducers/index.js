@@ -3,7 +3,7 @@ import TodoReducer from './reducer-todo.js';
 
 
 const allReducers = combineReducers({
-	todo: TodoReducer
+	todolist: TodoReducer
 });
 
 export default allReducers;
